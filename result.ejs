@@ -1,18 +1,269 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="/dist/css/skins/skin-yellow-light.min.css">
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/dist/js/adminlte.min.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Orange</title>
+
+
 </head>
-<body>
-    <h1>
-        Result
-    </h1>
-    <div>
-            <%= resu %>
+<body class="skin-yellow-light sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+  
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>O</b>TN</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Orange</b>TN</span>
+      </a>
+  
+      <!-- Header Navbar -->
+      <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+           
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" >
+                <!-- The user image in the navbar-->
+                <img src="/logout.png" class="user-image" alt="logout">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs" style="color:black; position: relative; top: 2px;">Logout</span>
+              </a>
+             
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+           
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+  
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+  
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="/logo.jpg" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p>WELCOME</p>
+            <!-- Status -->
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
+        </div>
+  
+     
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu" data-widget="tree">
+          <li class="header">Menu</li>
+          <!-- Optionally, you can add icons to the links -->
+          <li class="active"><a href="/"><i class="fa fa-link"></i> <span> Call and Service History</span></a></li>
+          
+        </ul>
+        <!-- /.sidebar-menu -->
+      </section>
+      <!-- /.sidebar -->
+    </aside>
+  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Call and Service History
+          <small></small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li> Call and Service History</li>
+          <li class="active">Result</li>
+        </ol>
+      </section>
+  
+      <!-- Main content -->
+      <section class="content container-fluid">
+        <div class="thumbnail table-responsive" style="overflow-x:scroll;height:80vh">
+        
+          <table class="table table-bordered table-hover" id="data-table">
+            <thead>
+              <th>a</th>
+              <th>aaaaaaaaaaaaaaaa</th>
+              <th>a</th>
+              <th>a</th>
+              
+              <th>aaaaaaaaaaaaaaaa</th>
+              <th>a</th>
+              <th>aaaaaaaaaaaaaaaa</th>
+              <th>aaaaaaaaaaaaaaaa</th>
+              
+              <th>aaaaaaaaaaaaaaaa</th>
+              <th>aaaaaaaaaaaaaaaa</th>
+              <th>aaaaaaaaaaaaaaaa</th>
+              <th>aaaaaaaaaaaaaaaa</th>
+            </thead>
+            
+            
+            <tbody id="resultdata">
+             
+              <%- resu %>
+              
+            </tbody>
+          </table>
+      </div>
+      </section>
+      <!-- /.content -->
     </div>
+    <!-- /.content-wrapper -->
+  
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="pull-right hidden-xs">
+       Ben Achour
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2018 <a href="#">Orange by support IN</a>.</strong> All rights reserved.
+    </footer>
+  
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane active" id="control-sidebar-home-tab">
+          <h3 class="control-sidebar-heading">Recent Activity</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:;">
+                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+  
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+  
+                  <p>Will be 23 on April 24th</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+  
+          <h3 class="control-sidebar-heading">Tasks Progress</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:;">
+                <h4 class="control-sidebar-subheading">
+                  Custom Template Design
+                  <span class="pull-right-container">
+                      <span class="label label-danger pull-right">70%</span>
+                    </span>
+                </h4>
+  
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+  
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+          <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
+  
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Report panel usage
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+  
+              <p>
+                Some information about this general settings option
+              </p>
+            </div>
+            <!-- /.form-group -->
+          </form>
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+  </div>
 </body>
+<script>
+  function sortTable() {
+    $('#resultdata').html($('tr').sort(function (a, b) {
+      if($(a).find("td")["0"] && $(b).find("td")["0"]){
+        dt1=$(a).find("td")["0"].textContent
+        dt2=$(b).find("td")["0"].textContent
+        d1=dt1.split("T")[0]
+        d2=dt2.split("T")[0]
+
+        t1=String(dt1).split("T")[1]
+        t2=String(dt2).split("T")[1]
+
+        y1=d1.split("-")[0]
+        m1=d1.split("-")[1]
+        day1=d1.split("-")[2]
+
+        y2=d2.split("-")[0]
+        m2=d2.split("-")[1]
+        day2=d2.split("-")[2]
+
+        h1=t1.split(":")[0]
+        min1=t1.split(":")[1]
+        sec1=t1.split(":")[2]
+
+        h2=t2.split(":")[0]
+        min2=t2.split(":")[1]
+        sec2=t2.split(":")[2]
+        comp1=new Date(y1,m1,day1,h1,min1,sec1,0)
+        comp2=new Date(y2,m2,day2,h2,min2,sec2,0)
+      return (comp1>comp2)}
+      }));
+  }
+$(document).ready(function() {
+   sortTable();
+});
+</script>
+
 </html>
+
